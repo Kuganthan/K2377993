@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".ContactDetails">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <!-- fab button for back-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:backgroundTint="@color/purple_500"
+            android:src="@drawable/baseline_first_page_24"
+            app:tint="@color/black"
+            android:elevation="@dimen/_5sdp"
+            app:pressedTranslationZ="@dimen/_10sdp"
+            android:contentDescription="TODO" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar">
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY" />
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Kuganthan"
+            android:textColor="@color/colorTextSecondary"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp" />
+
+        <TextView
+            android:id="@+id/noteTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Address"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_12sdp" />
+
+       <TableLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="@dimen/_10sdp"
+           android:stretchColumns="2">
+           <TableRow>
+               <TextView
+                   android:text="Phone"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:textColor="@color/colorTextPrimary" />
+               <TextView
+                   android:id="@+id/phoneTv"
+                   tools:text="0771234567"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:padding="@dimen/_5sdp"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:textColor="@color/colorTextSecondary" />
+           </TableRow>
+           <TableRow>
+               <TextView
+                   android:text="Email"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:textColor="@color/colorTextPrimary" />
+               <TextView
+                   android:id="@+id/emailTv"
+                   tools:text="kuganthan@gmail.com"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:padding="@dimen/_5sdp"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:textColor="@color/colorTextSecondary" />
+           </TableRow>
+           <TableRow>
+               <TextView
+                   android:text="Added Time"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:textColor="@color/colorTextPrimary" />
+               <TextView
+                   android:id="@+id/addedTimeTv"
+                   tools:text="0771234567"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:padding="@dimen/_5sdp"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:textColor="@color/colorTextSecondary" />
+           </TableRow>
+           <TableRow>
+               <TextView
+                   android:text="Updated Time"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:textColor="@color/colorTextPrimary" />
+               <TextView
+                   android:id="@+id/updatedTimeTv"
+                   tools:text="0771234567"
+                   android:textSize="@dimen/_14sdp"
+                   android:textStyle="bold"
+                   android:padding="@dimen/_5sdp"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:textColor="@color/colorTextSecondary" />
+           </TableRow>
+       </TableLayout>
+    </LinearLayout>
+
+</RelativeLayout>
